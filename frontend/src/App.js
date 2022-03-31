@@ -20,7 +20,6 @@ function App() {
       setalert({ message: "", type: "" })
     }, 1500);
   }
-  // showAlert('how are you', ('danger'))
   return (
     <>
       <NoteState>

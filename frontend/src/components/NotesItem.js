@@ -2,7 +2,6 @@ import React from 'react'
 import { useContext } from 'react/cjs/react.development'
 import noteContext from '../context/notes/noteContext'
 function NotesItem(props) {
-    // const showAlert = props
     const context = useContext(noteContext)
     const { deleteNote } = context
     const {updateNote} = props

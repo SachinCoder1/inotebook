@@ -28,9 +28,6 @@ function Notes(props) {
     const updateNoteBtn = () => {
         refClose.current.click()
         props.showAlert('Note updated', 'success')
-        // addNote(note.title, note.description, note.tag)
-        //  setNote({title:"", description:"", tag:"general" })
-        // console.log('updating the note', note)
         editNote(note.id, note.title, note.description, note.tag)
     }
     const onChange = (e) => {

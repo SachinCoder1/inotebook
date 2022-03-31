@@ -14,23 +14,19 @@ function Signup(props) {
             body: JSON.stringify({ name: credentials.name, email: credentials.email, password: credentials.password })
         });
         const json = await response.json()
-        // console.log(json)
         if (json.success) {
             localStorage.setItem('token', json.authToken)
             props.showAlert('Account created successfully', 'success')
             navigate('/')
 
         } else {
-            // props.showAlert('Invalid credentials', 'danger')
             props.showAlert('Please enter valid details', 'danger')
         }
     }
     const onChange = (e) => {
-        // setcredentials({email:document.querySelector('.email').value, password:document.querySelector('.password').value})
         setcredentials({ ...credentials, [e.target.name]: e.target.value })
     }
 
-    // const [checkPassword, setcheckPassword] = useState(false)
 
     return (
         <div>
